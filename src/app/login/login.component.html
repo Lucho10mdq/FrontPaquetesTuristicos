@@ -1,0 +1,28 @@
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <span class="navbar-text">
+    <a class="nav-link" [routerLink]="['/register']">Registrarse</a>
+  </span>        
+</nav>
+<!-- CONTENT -->
+<main class="py-5">
+  <section id="eliminar">
+      <div class="container">
+          <h2 class="mb-4">Iniciar Sesión</h2>
+
+          <form #f="ngForm" (ngSubmit)="onSubmit()" class="form-inline bg-light-alpha p-5">
+              <div class="form-group text-white">
+                  <label for="">Email:</label>
+                  <input type="text" id="email" name="email" value="" class="form-control ml-3"  [(ngModel)]="user.Email">
+              </div>                    
+              <div class="form-group text-white">
+                  <label for="">Password:</label>
+                  <input type="password" id="password" name="password" value="" class="form-control ml-3"  [(ngModel)]="user.Password">
+              </div>
+              <button type="submit" id="LoginButton" name="button" class="btn btn-info ml-3">Iniciar Sesión</button>
+              <span id="message"></span>
+          </form>
+      </div>
+  </section>
+</main>
+<!-- FOOTER -->

@@ -1,0 +1,42 @@
+<main class="py-5">
+    <section id="listado" class="mb-5">
+        <div class="container">
+            <h2 class="mb-4">Modificar Cliente</h2>
+            <form  #f="ngForm" (ngSubmit)="onSubmit()" class="bg-light-alpha p-5">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label for="">Nombre</label>
+                            <input type="text" id="name" name="name" value="" class="form-control" [(ngModel)]="client.Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="">Apellido</label>
+                            <input type="text" id="lastname" name="lastname" value="" class="form-control" [(ngModel)]="client.Lastname">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label for="">Dni</label>
+                            <input type="text" id="dni" name="dni" value="" class="form-control" [(ngModel)]="client.Dni">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label for="">Domicilio</label>
+                            <input type="text" id="address" name="address" value="" class="form-control" [(ngModel)]="client.Address">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="">Fecha de Nacimiento</label>
+                            <input type="text" id="fecha" name="fecha" value="" class="form-control" [(ngModel)]="client.FechaNacimiento">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="ModifyButton" name="button" class="btn btn-dark ml-auto d-block">Modificar</button>
+            </form>
+        </div>
+    </section>
+  </main>
